@@ -177,7 +177,10 @@ public class MainActivity extends AppCompatActivity {
         //Khởi tạo list
         mangloaisp = new ArrayList<>();
         mangSpMoi = new ArrayList<>();
+        if (Utils.manggiohang == null){
+            Utils.manggiohang = new ArrayList<>();
 
+        }
     }
 
     //Hàm kiểm tra kết nối internet
