@@ -3,10 +3,12 @@ package com.an.cuoiki.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -84,7 +86,11 @@ public class ChiTietActivity extends AppCompatActivity {
             Utils.manggiohang.add(gioHang);
 
         }
-        badge.setText(String.valueOf(Utils.manggiohang.size()));
+        int totalItem = 0;
+        for (int i=0;i<Utils.manggiohang.size();i++){
+            totalItem = totalItem + Utils.manggiohang.get(i).getSoluong();
+        }
+        badge.setText(String.valueOf(totalItem));
     }
 
     private void initData() {
@@ -109,8 +115,21 @@ public class ChiTietActivity extends AppCompatActivity {
         imghinhanh = findViewById(R.id.imgchitiet);
         toolbar = findViewById(R.id.toolbar);
         badge = findViewById(R.id.menu_sl);
+        FrameLayout frameLayoutgiohang = findViewById(R.id.framegiohang);
+        frameLayoutgiohang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent giohang = new Intent(getApplicationContext(), GioHangActivity.class);
+                startActivity(giohang);
+            }
+        });
         if (Utils.manggiohang != null){
-            badge.setText(String.valueOf(Utils.manggiohang.size()));
+            int totalItem = 0;
+            for (int i=0;i<Utils.manggiohang.size();i++){
+                totalItem = totalItem + Utils.manggiohang.get(i).getSoluong();
+            }
+
+            badge.setText(String.valueOf(totalItem));
         }
     }
 
