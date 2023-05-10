@@ -22,7 +22,7 @@ import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class DangNhapActivity extends AppCompatActivity {
-    TextView txtdangky;
+    TextView txtdangky, txtresetpass;
     EditText email, pass;
     AppCompatButton btndangnhap;
     ApiBanHang apiBanHang;
@@ -45,6 +45,13 @@ public class DangNhapActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        txtresetpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ResetPassActivity.class);
+                startActivity(intent);
+            }
+        });
         btndangnhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,7 +66,7 @@ public class DangNhapActivity extends AppCompatActivity {
                     //save (nho email va pass cho lan dang nhap sau)
                     Paper.book().write("email", str_email);
                     Paper.book().write("pass", str_pass);
-                    compositeDisposable.add(apiBanHang.dangnhap(str_email,str_pass)
+                    compositeDisposable.add(apiBanHang.dangNhap(str_email,str_pass)
                             .subscribeOn(Schedulers.io())
                             .observeOn(AndroidSchedulers.mainThread())
                             .subscribe(
@@ -85,6 +92,7 @@ public class DangNhapActivity extends AppCompatActivity {
         Paper.init(this);
         apiBanHang = RetrofitClient.getInstance(Utils.BASE_URL).create(ApiBanHang.class);
         txtdangky = findViewById(R.id.txtdangky);
+        txtresetpass = findViewById(R.id.txtresetpass);
         email = findViewById(R.id.email);
         pass = findViewById(R.id.pass);
         btndangnhap = findViewById(R.id.btndangnhap);

@@ -29,7 +29,7 @@ public interface ApiBanHang {
 
     @POST("dangky.php")
     @FormUrlEncoded
-    Observable<UserModel> dangky(
+    Observable<UserModel> dangKy(
             @Field("email") String email,
             @Field("pass") String pass,
             @Field("username") String username,
@@ -38,8 +38,14 @@ public interface ApiBanHang {
 
     @POST("dangnhap.php")
     @FormUrlEncoded
-    Observable<UserModel> dangnhap(
+    Observable<UserModel> dangNhap(
             @Field("email") String email,
             @Field("pass") String pass
+    );
+
+    @POST("reset.php")
+    @FormUrlEncoded
+    Observable<UserModel> resetPass(
+            @Field("email") String email
     );
 }

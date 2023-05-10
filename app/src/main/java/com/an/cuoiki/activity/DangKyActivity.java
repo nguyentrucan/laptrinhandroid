@@ -63,7 +63,7 @@ public class DangKyActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"Bạn chưa nhập Username", Toast.LENGTH_LONG).show();
         }else {
             if (str_pass.equals(str_repass)){
-                compositeDisposable.add(apiBanHang.dangky(str_email, str_pass, str_username, str_mobile)
+                compositeDisposable.add(apiBanHang.dangKy(str_email, str_pass, str_username, str_mobile)
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribe(
