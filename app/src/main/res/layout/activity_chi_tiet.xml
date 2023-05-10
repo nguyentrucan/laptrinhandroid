@@ -8,8 +8,9 @@
     tools:context=".activity.ChiTietActivity">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:background="#3AD541"
+        android:background="@color/colortext"
         app:title="Chi tiết sản phẩm"
+        app:titleTextColor="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize">
@@ -82,8 +83,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginTop="5dp"
-                android:backgroundTint="#4E96C6"
-
+                android:backgroundTint="@color/colortext"
                 android:textSize="12sp"
                 android:textColor="@android:color/white"
                 android:text="@string/th_m_v_o_gi_h_ng"
