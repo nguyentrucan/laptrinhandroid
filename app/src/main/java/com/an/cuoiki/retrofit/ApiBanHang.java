@@ -1,5 +1,6 @@
 package com.an.cuoiki.retrofit;
 
+import com.an.cuoiki.model.DonHangModel;
 import com.an.cuoiki.model.LoaiSpModel;
 import com.an.cuoiki.model.SanPhamMoiModel;
 import com.an.cuoiki.model.User;
@@ -59,5 +60,11 @@ public interface ApiBanHang {
             @Field("diachi") String diachi,
             @Field("soluong") int soluong,
             @Field("chitiet") String chitiet
+    );
+
+    @POST("xemdonhang.php")
+    @FormUrlEncoded
+    Observable<DonHangModel> xemDonHang(
+            @Field("iduser") int id
     );
 }
