@@ -94,7 +94,7 @@ public class DangNhapActivity extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            dangNhap(Paper.book().read("email"),Paper.book().read("pass"));
+                            //dangNhap(Paper.book().read("email"),Paper.book().read("pass"));
                         }
                     }, 1000);
                 }
@@ -112,6 +112,8 @@ public class DangNhapActivity extends AppCompatActivity {
                                 isLogin = true;
                                 Paper.book().write("islogin", isLogin);
                                 Utils.user_curent = userModel.getResult().get(0);
+                                // lưu lại thông tin người dùng
+                                Paper.book().write("user", userModel.getResult().get(0));
                                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                 startActivity(intent);
                                 finish();

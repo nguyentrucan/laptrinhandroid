@@ -64,7 +64,7 @@
             </ViewFlipper>
 
             <LinearLayout
-                android:background="#5992d2"
+                android:background="@color/colortext"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">

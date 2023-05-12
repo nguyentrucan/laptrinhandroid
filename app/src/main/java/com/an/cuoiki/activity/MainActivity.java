@@ -28,6 +28,7 @@ import com.an.cuoiki.adapter.LoaiSpAdapter;
 import com.an.cuoiki.adapter.SanPhamMoiAdapter;
 import com.an.cuoiki.model.LoaiSp;
 import com.an.cuoiki.model.SanPhamMoi;
+import com.an.cuoiki.model.User;
 import com.an.cuoiki.retrofit.ApiBanHang;
 import com.an.cuoiki.retrofit.RetrofitClient;
 import com.an.cuoiki.utils.Utils;
@@ -39,9 +40,11 @@ import com.nex3z.notificationbadge.NotificationBadge;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.paperdb.Paper;
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
+import okhttp3.internal.Util;
 
 public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
@@ -66,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         apiBanHang = RetrofitClient.getInstance(Utils.BASE_URL).create(ApiBanHang.class);
+
+        Paper.init(this);
+        if (Paper.book().read("user") != null){
+            User user = Paper.book().read("user");
+            Utils.user_curent = user;
+        }
 
         Anhxa();
         ActionBar();
@@ -104,6 +113,13 @@ public class MainActivity extends AppCompatActivity {
                         Intent donhang = new Intent(getApplicationContext(), XemDonActivity.class);
                         startActivity(donhang);
                         break;
+                    case 6:
+                        //xóa key user
+                        Paper.book().delete("user");
+                        Intent dangnhap = new Intent(getApplicationContext(), DangNhapActivity.class);
+                        startActivity(dangnhap);
+                        finish();
+                        break;
                 }
             }
         });
@@ -135,6 +151,7 @@ public class MainActivity extends AppCompatActivity {
                         loaiSpModel -> {
                             if (loaiSpModel.isSuccess()){
                                 mangloaisp = loaiSpModel.getResult();
+                                mangloaisp.add(new LoaiSp("Đăng xuất","https://c3.klipartz.com/pngpicture/421/12/sticker-png-sword-art-online-vector-icons-logout.png"));
                                 loaiSpAdapter = new LoaiSpAdapter(getApplicationContext(),mangloaisp);
                                 listViewManHinhChinh.setAdapter(loaiSpAdapter);
                             }
