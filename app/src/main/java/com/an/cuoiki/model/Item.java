@@ -1,10 +1,10 @@
 package com.an.cuoiki.model;
 
 public class Item {
-    int idsp;
-    String tensp;
-    int soluong;
-    String hinhanh;
+    private int idsp;
+    private String tensp;
+    private int soluong;
+    private String hinhanh;
 
     public int getSoluong() {
         return soluong;

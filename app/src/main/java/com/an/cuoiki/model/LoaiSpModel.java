@@ -3,9 +3,9 @@ package com.an.cuoiki.model;
 import java.util.List;
 
 public class LoaiSpModel {
-    boolean success;
-    String message;
-    List<LoaiSp> result;
+    private boolean success;
+    private String message;
+    private List<LoaiSp> result;
 
     public boolean isSuccess() {
         return success;

@@ -27,17 +27,17 @@ import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class DienThoaiActivity extends AppCompatActivity {
-    Toolbar toolbar;
-    RecyclerView recyclerView;
-    ApiBanHang apiBanHang;
-    CompositeDisposable compositeDisposable = new CompositeDisposable();
-    int page = 1;
-    int loai;
-    DienThoaiAdapter adapterDt;
-    List<SanPhamMoi> sanPhamMoiList;
-    LinearLayoutManager linearLayoutManager;
-    Handler handler = new Handler();
-    boolean isLoading = false;
+    private Toolbar toolbar;
+    private RecyclerView recyclerView;
+    private ApiBanHang apiBanHang;
+    private CompositeDisposable compositeDisposable = new CompositeDisposable();
+    private int page = 1;
+    private int loai;
+    private DienThoaiAdapter adapterDt;
+    private List<SanPhamMoi> sanPhamMoiList;
+    private LinearLayoutManager linearLayoutManager;
+    private Handler handler = new Handler();
+    private boolean isLoading = false;
 
 
     @Override

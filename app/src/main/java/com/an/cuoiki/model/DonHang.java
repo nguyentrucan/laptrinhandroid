@@ -3,12 +3,12 @@ package com.an.cuoiki.model;
 import java.util.List;
 
 public class DonHang {
-    int id;
-    int iduser;
-    String diachi;
-    String sodienthoai;
-    String tongtienl;
-    List<Item> item;
+    private int id;
+    private int iduser;
+    private String diachi;
+    private String sodienthoai;
+    private String tongtienl;
+    private List<Item> item;
 
     public int getId() {
         return id;

@@ -21,11 +21,11 @@ import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class ResetPassActivity extends AppCompatActivity {
-    EditText email;
-    AppCompatButton btnreset;
-    ApiBanHang apiBanHang;
-    CompositeDisposable compositeDisposable = new CompositeDisposable();
-    ProgressBar progressBar;
+    private EditText email;
+    private AppCompatButton btnreset;
+    private ApiBanHang apiBanHang;
+    private CompositeDisposable compositeDisposable = new CompositeDisposable();
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

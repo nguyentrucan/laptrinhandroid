@@ -23,13 +23,13 @@ import com.nex3z.notificationbadge.NotificationBadge;
 import java.text.DecimalFormat;
 
 public class ChiTietActivity extends AppCompatActivity {
-    TextView tensp, giasp, mota;
-    Button btnthem;
-    ImageView imghinhanh;
-    Spinner spinner;
-    Toolbar toolbar;
-    SanPhamMoi sanPhamMoi;
-    NotificationBadge badge;
+    private TextView tensp, giasp, mota;
+    private Button btnthem;
+    private ImageView imghinhanh;
+    private Spinner spinner;
+    private Toolbar toolbar;
+    private SanPhamMoi sanPhamMoi;
+    private NotificationBadge badge;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

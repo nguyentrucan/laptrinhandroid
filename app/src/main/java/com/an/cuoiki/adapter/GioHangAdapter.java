@@ -28,8 +28,8 @@ import java.text.DecimalFormat;
 import java.util.List;
 
 public class GioHangAdapter extends RecyclerView.Adapter<GioHangAdapter.MyViewHolder> {
-    Context context;
-    List<GioHang> gioHangList;
+    private Context context;
+    private List<GioHang> gioHangList;
 
     public GioHangAdapter(Context context, List<GioHang> gioHangList) {
         this.context = context;
@@ -90,6 +90,7 @@ public class GioHangAdapter extends RecyclerView.Adapter<GioHangAdapter.MyViewHo
                         builder.setPositiveButton("Đồng ý", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
+                                Utils.mangmuahang.remove(gioHang);
                                 Utils.manggiohang.remove(pos);
                                 notifyDataSetChanged();
                                 EventBus.getDefault().postSticky(new TinhTongEvent());

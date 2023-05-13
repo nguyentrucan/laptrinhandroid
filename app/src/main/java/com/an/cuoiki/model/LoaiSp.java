@@ -1,9 +1,9 @@
 package com.an.cuoiki.model;
 
 public class LoaiSp {
-    int id;
-    String tensanpham;
-    String hinhanh;
+    private int id;
+    private String tensanpham;
+    private String hinhanh;
 
     public LoaiSp(String tensanpham, String hinhanh) {
         this.tensanpham = tensanpham;

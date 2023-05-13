@@ -3,12 +3,12 @@ package com.an.cuoiki.model;
 import java.io.Serializable;
 
 public class SanPhamMoi implements Serializable {
-    int id;
-    String tensp;
-    String hinhanh;
-    String giasp;
-    String mota;
-    int loai;
+    private int id;
+    private String tensp;
+    private String hinhanh;
+    private String giasp;
+    private String mota;
+    private int loai;
 
     public int getId() {
         return id;

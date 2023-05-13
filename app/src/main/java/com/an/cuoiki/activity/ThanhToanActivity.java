@@ -26,14 +26,14 @@ import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class ThanhToanActivity extends AppCompatActivity {
-    Toolbar toolbar;
-    TextView txttongtien, txtsdt, txtemail;
-    EditText edtdiachi;
-    AppCompatButton btndathang;
-    CompositeDisposable compositeDisposable = new CompositeDisposable();
-    ApiBanHang apiBanHang;
-    long tongtien;
-    int totalItem;
+    private Toolbar toolbar;
+    private TextView txttongtien, txtsdt, txtemail;
+    private EditText edtdiachi;
+    private AppCompatButton btndathang;
+    private CompositeDisposable compositeDisposable = new CompositeDisposable();
+    private ApiBanHang apiBanHang;
+    private long tongtien;
+    private int totalItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

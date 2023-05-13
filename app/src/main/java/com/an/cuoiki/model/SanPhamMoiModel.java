@@ -3,9 +3,9 @@ package com.an.cuoiki.model;
 import java.util.List;
 
 public class SanPhamMoiModel {
-    boolean success;
-    String message;
-    List<SanPhamMoi> result;
+    private boolean success;
+    private String message;
+    private List<SanPhamMoi> result;
 
     public boolean isSuccess() {
         return success;

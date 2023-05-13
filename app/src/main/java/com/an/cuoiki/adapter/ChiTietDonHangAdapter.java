@@ -17,8 +17,8 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 public class ChiTietDonHangAdapter extends RecyclerView.Adapter<ChiTietDonHangAdapter.MyViewHolder> {
-    Context context;
-    List<Item> itemList;
+    private Context context;
+    private List<Item> itemList;
 
     public ChiTietDonHangAdapter(Context context, List<Item> itemList) {
         this.context = context;

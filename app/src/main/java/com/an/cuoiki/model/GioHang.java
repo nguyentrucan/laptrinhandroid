@@ -1,11 +1,11 @@
 package com.an.cuoiki.model;
 
 public class GioHang {
-    int idsp;
-    String tensp;
-    long giasp;
-    String hinhsp;
-    int soluong;
+    private int idsp;
+    private String tensp;
+    private long giasp;
+    private String hinhsp;
+    private int soluong;
 
     public GioHang() {
     }

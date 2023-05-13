@@ -15,8 +15,8 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 public class LoaiSpAdapter extends BaseAdapter {
-    List<LoaiSp> array;
-    Context context;
+    private List<LoaiSp> array;
+    private Context context;
 
     public LoaiSpAdapter(Context context,List<LoaiSp> array) {
         this.array = array;

@@ -23,12 +23,12 @@ import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class DangNhapActivity extends AppCompatActivity {
-    TextView txtdangky, txtresetpass;
-    EditText email, pass;
-    AppCompatButton btndangnhap;
-    ApiBanHang apiBanHang;
-    CompositeDisposable compositeDisposable = new CompositeDisposable();
-    boolean isLogin = false;
+    private TextView txtdangky, txtresetpass;
+    private EditText email, pass;
+    private AppCompatButton btndangnhap;
+    private ApiBanHang apiBanHang;
+    private CompositeDisposable compositeDisposable = new CompositeDisposable();
+    private boolean isLogin = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

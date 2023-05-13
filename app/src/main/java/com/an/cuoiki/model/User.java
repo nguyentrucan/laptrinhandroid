@@ -1,11 +1,11 @@
 package com.an.cuoiki.model;
 
 public class User {
-    int id;
-    String email;
-    String pass;
-    String username;
-    String mobile;
+    private int id;
+    private String email;
+    private String pass;
+    private String username;
+    private String mobile;
 
     public int getId() {
         return id;

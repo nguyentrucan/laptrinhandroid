@@ -17,8 +17,8 @@ import java.util.List;
 
 public class DonHangAdapter extends RecyclerView.Adapter<DonHangAdapter.MyViewHolder> {
     private RecyclerView.RecycledViewPool viewPool = new RecyclerView.RecycledViewPool();
-    Context context;
-    List<DonHang> listdonhang;
+    private Context context;
+    private List<DonHang> listdonhang;
 
     public DonHangAdapter(Context context, List<DonHang> listdonhang) {
         this.context = context;

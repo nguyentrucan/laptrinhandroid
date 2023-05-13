@@ -21,8 +21,8 @@ import java.text.DecimalFormat;
 import java.util.List;
 
 public class SanPhamMoiAdapter extends RecyclerView.Adapter<SanPhamMoiAdapter.MyViewHolder> {
-    Context context;
-    List<SanPhamMoi> array;
+    private Context context;
+    private List<SanPhamMoi> array;
 
     public SanPhamMoiAdapter(Context context, List<SanPhamMoi> array) {
         this.context = context;

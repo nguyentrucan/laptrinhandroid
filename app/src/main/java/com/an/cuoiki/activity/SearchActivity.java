@@ -27,13 +27,13 @@ import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class SearchActivity extends AppCompatActivity {
-    Toolbar toolbar;
-    RecyclerView recyclerView;
-    EditText edtSearch;
-    DienThoaiAdapter adapter;
-    List<SanPhamMoi> sanPhamMoiList;
-    ApiBanHang apiBanHang;
-    CompositeDisposable compositeDisposable = new CompositeDisposable();
+    private Toolbar toolbar;
+    private RecyclerView recyclerView;
+    private EditText edtSearch;
+    private DienThoaiAdapter adapter;
+    private List<SanPhamMoi> sanPhamMoiList;
+    private ApiBanHang apiBanHang;
+    private CompositeDisposable compositeDisposable = new CompositeDisposable();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,6 +101,10 @@ public class SearchActivity extends AppCompatActivity {
                                 sanPhamMoiList = sanPhamMoiModel.getResult();
                                 adapter = new DienThoaiAdapter(getApplicationContext(),sanPhamMoiList);
                                 recyclerView.setAdapter(adapter);
+                            }else {
+                                Toast.makeText(getApplicationContext(), sanPhamMoiModel.getMessage(),Toast.LENGTH_SHORT).show();
+                                sanPhamMoiList.clear();
+                                adapter.notifyDataSetChanged();
                             }
                         },
                         throwable -> {

@@ -47,21 +47,21 @@ import io.reactivex.rxjava3.schedulers.Schedulers;
 import okhttp3.internal.Util;
 
 public class MainActivity extends AppCompatActivity {
-    Toolbar toolbar;
-    ViewFlipper viewFlipper;
-    RecyclerView recyclerViewManHinhChinh;
-    NavigationView navigationView;
-    ListView listViewManHinhChinh;
-    DrawerLayout drawerLayout;
-    LoaiSpAdapter loaiSpAdapter;
-    List<LoaiSp> mangloaisp;
-    CompositeDisposable compositeDisposable = new CompositeDisposable();
-    ApiBanHang apiBanHang;
-    List<SanPhamMoi> mangSpMoi;
-    SanPhamMoiAdapter spAdapter;
-    NotificationBadge badge;
-    FrameLayout frameLayout;
-    ImageView imgsearch;
+    private Toolbar toolbar;
+    private ViewFlipper viewFlipper;
+    private RecyclerView recyclerViewManHinhChinh;
+    private NavigationView navigationView;
+    private ListView listViewManHinhChinh;
+    private DrawerLayout drawerLayout;
+    private LoaiSpAdapter loaiSpAdapter;
+    private List<LoaiSp> mangloaisp;
+    private CompositeDisposable compositeDisposable = new CompositeDisposable();
+    private ApiBanHang apiBanHang;
+    private List<SanPhamMoi> mangSpMoi;
+    private SanPhamMoiAdapter spAdapter;
+    private NotificationBadge badge;
+    private FrameLayout frameLayout;
+    private ImageView imgsearch;
 
 
     @Override
@@ -138,7 +138,8 @@ public class MainActivity extends AppCompatActivity {
                             }
                         },
                         throwable -> {
-                            Toast.makeText(getApplicationContext(),"Không kết nối được với sever" + throwable.getMessage(), Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"Không kết nối được với sever" +
+                                    throwable.getMessage(), Toast.LENGTH_LONG).show();
                         }
                 ));
     }

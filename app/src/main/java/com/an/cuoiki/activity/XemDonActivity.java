@@ -20,10 +20,10 @@ import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class XemDonActivity extends AppCompatActivity {
-    CompositeDisposable compositeDisposable = new CompositeDisposable();
-    ApiBanHang apiBanHang;
-    RecyclerView reDonhang;
-    Toolbar toolbar;
+    private CompositeDisposable compositeDisposable = new CompositeDisposable();
+    private ApiBanHang apiBanHang;
+    private RecyclerView reDonhang;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

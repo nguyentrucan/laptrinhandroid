@@ -22,8 +22,8 @@ import java.text.DecimalFormat;
 import java.util.List;
 
 public class DienThoaiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    Context context;
-    List<SanPhamMoi> array;
+    private Context context;
+    private List<SanPhamMoi> array;
     private static final int VIEW_TYPE_DATA = 0;
     private static final int VIEW_TYPE_LOADING = 1;
 

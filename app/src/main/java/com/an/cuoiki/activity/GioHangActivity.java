@@ -27,12 +27,12 @@ import java.text.DecimalFormat;
 import java.util.List;
 
 public class GioHangActivity extends AppCompatActivity {
-    TextView giohangtrong, tongtien;
-    Toolbar toolbar;
-    RecyclerView recyclerView;
-    Button btnmuahang;
-    GioHangAdapter adapter;
-    long tongtiensp;
+    private TextView giohangtrong, tongtien;
+    private Toolbar toolbar;
+    private RecyclerView recyclerView;
+    private Button btnmuahang;
+    private GioHangAdapter adapter;
+    private long tongtiensp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +41,11 @@ public class GioHangActivity extends AppCompatActivity {
 
         initView();
         initControl();
+
+        if (Utils.mangmuahang != null){
+            Utils.mangmuahang.clear();
+        }
+
         tinhTongTien();
     }
 

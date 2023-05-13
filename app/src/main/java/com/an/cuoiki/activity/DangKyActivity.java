@@ -20,10 +20,10 @@ import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class DangKyActivity extends AppCompatActivity {
-    EditText email, pass, repass, mobile, username;
-    AppCompatButton button;
-    ApiBanHang apiBanHang;
-    CompositeDisposable compositeDisposable = new CompositeDisposable();
+    private EditText email, pass, repass, mobile, username;
+    private AppCompatButton button;
+    private ApiBanHang apiBanHang;
+    private CompositeDisposable compositeDisposable = new CompositeDisposable();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
